@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: 13, 17, 23;
+  --color-secondary: 1, 4, 9;
+  --color-third: 61, 68, 77;
+  --color-border: 61, 68, 77;
+  --color-text: 240, 246, 252;
+  --color-accent: 31, 111, 235;
+}
+
+body {
+  color: rgba(var(--color-text));
+}
+
+@layer utilities {
+  .scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(var(--color-border), 0.6)
+      rgba(var(--color-third), 0.3);
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 1em;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background: rgba(var(--color-third), 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(var(--color-secondary), 0.3);
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(var(--color-border), 0.6);
+    outline: 1px solid rgba(var(--color-primary), 0.8);
+    border-radius: 5px;
+  }
+}
